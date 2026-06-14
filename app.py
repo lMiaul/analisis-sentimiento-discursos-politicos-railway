@@ -27,7 +27,8 @@ def init_services():
         st.stop()
         
     genai.configure(api_key=GOOGLE_API_KEY)
-    model = genai.GenerativeModel('gemini-pro')
+    # Código actualizado
+    model = genai.GenerativeModel('gemini-1.5-flash')
     
     client = pymongo.MongoClient(MONGO_URL)
     db = client["analisis_politico"]
